@@ -22,6 +22,7 @@
   ],
   "dependencies": {
     "@rdfjs/data-model": "git@github.com:elf-pavlik/data-model.git#esm",
+    "@rollup/plugin-commonjs": "^11.1.0",
     "cl-editor": "^2.0.0"
   }
 }

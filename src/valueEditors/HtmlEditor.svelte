@@ -18,7 +18,6 @@
       }
     }
   }
-  $: console.log("content", content);
   onMount(() => {
     editor = new Editor({
       target: editArea,

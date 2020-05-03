@@ -1,5 +1,5 @@
 <script>
-  import Factory from "@rdfjs/data-model";
+  import * as Factory from "@rdfjs/data-model";
   let content = "";
   let lang = "";
   export let value;

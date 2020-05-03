@@ -2,6 +2,8 @@ import svelte from 'rollup-plugin-svelte';
 import resolve from '@rollup/plugin-node-resolve';
 import pkg from './package.json';
 import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
+import builtins from 'rollup-plugin-node-builtins';
 
 const name = pkg.name
 	.replace(/^(@\S+\/)?(svelte-)?(\S+)/, '$3')
@@ -17,6 +19,8 @@ export default {
 	plugins: [
 		svelte(),
 		resolve(),
-		commonjs()
+		commonjs(),
+		json(),
+		builtins()
 	]
 };

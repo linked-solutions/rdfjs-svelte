@@ -25,33 +25,34 @@
       )
     : availableOptions;
 
-  let optionLabels = Object.keys(options)
+  let optionLabels = Object.keys(options);
   function typeSelected(event) {
-    console.log("termTypes: ", termTypes);
-    console.log("typeSelected: ", event);
-    console.log("type: ", type);
     if (type !== null) {
-      console.log("maps to: ", options[type]);
       value = options[type];
     }
   }
   function reset() {
-    console.log("termTypes: ", termTypes);
-    console.log("resetting editor", value);
     type = null;
     value = null;
   }
 </script>
 
+<style>
+  span {
+    display: flex;
+  }
+
+  svg {
+    height: 1em;
+  }
+</style>
 
 <div class="te">
   {#if !value}
     <select bind:value={type} on:change={typeSelected}>
       <option disabled value={null}>Select type</option>
       {#each Object.keys(options) as option}
-      <option value={option}>
-        { option }
-      </option>
+        <option value={option}>{option}</option>
       {/each}
     </select>
   {:else}
@@ -64,9 +65,7 @@
         </svg>
       </button>
       {#if value !== null}
-      <ExistingTermEditor
-        bind:value={value}
-        on:input />
+        <ExistingTermEditor bind:value on:input />
       {/if}
     </span>
   {/if}

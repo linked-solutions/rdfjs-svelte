@@ -28,7 +28,15 @@
   }
 </script>
 
-<div class="g">
+<style>
+  .compact {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: start;
+  }
+</style>
+
+<div class={labels?"labeled":"compact"}>
 
   {#if labels}
     <label>Subject:</label>

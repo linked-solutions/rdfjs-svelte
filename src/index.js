@@ -4,3 +4,4 @@ export { default as BlankNodeEditor } from './valueEditors/BlankNodeEditor.svelt
 export { default as NamedNodeEditor } from './valueEditors/NamedNodeEditor.svelte';
 export { default as ExistingTermEditor } from './ExistingTermEditor.svelte';
 export { default as TermEditor } from './TermEditor.svelte';
+export { default as QuadEditor } from './QuadEditor.svelte';

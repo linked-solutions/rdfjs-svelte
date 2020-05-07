@@ -25,7 +25,6 @@
       )
     : availableOptions;
 
-  let optionLabels = Object.keys(options);
   function typeSelected(event) {
     if (type !== null) {
       value = options[type];

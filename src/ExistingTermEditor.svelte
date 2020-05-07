@@ -23,7 +23,7 @@
       ? "DefaultGraph"
       : "BlankNode";
   }
-  const type = getType();
+  $: type = getType(value);
 </script>
 
 <div class="f" :key="type">

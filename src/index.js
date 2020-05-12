@@ -5,3 +5,4 @@ export { default as NamedNodeEditor } from './valueEditors/NamedNodeEditor.svelt
 export { default as ExistingTermEditor } from './ExistingTermEditor.svelte';
 export { default as TermEditor } from './TermEditor.svelte';
 export { default as QuadEditor } from './QuadEditor.svelte';
+export { default as DatasetEditor } from './DatasetEditor.svelte';

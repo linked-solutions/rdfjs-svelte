@@ -4,6 +4,9 @@ import pkg from './package.json';
 import commonjs from '@rollup/plugin-commonjs';
 import json from '@rollup/plugin-json';
 import builtins from 'rollup-plugin-node-builtins';
+import typescript from "@wessberg/rollup-plugin-ts";
+
+const svelteOptions = require("./svelte.config");
 
 const name = pkg.name
 	.replace(/^(@\S+\/)?(svelte-)?(\S+)/, '$3')
@@ -17,10 +20,15 @@ export default {
 		{ file: pkg.main, 'format': 'umd', name }
 	],
 	plugins: [
-		svelte(),
-		resolve(),
+		svelte({
+			...svelteOptions
+		}),
+		resolve({
+			preferBuiltins: true
+		}),
 		commonjs(),
 		json(),
-		builtins()
+		builtins(),
+		typescript()
 	]
 };

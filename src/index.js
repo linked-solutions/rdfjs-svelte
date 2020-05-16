@@ -6,3 +6,4 @@ export { default as ExistingTermEditor } from './ExistingTermEditor.svelte';
 export { default as TermEditor } from './TermEditor.svelte';
 export { default as QuadEditor } from './QuadEditor.svelte';
 export { default as DatasetEditor } from './DatasetEditor.svelte';
+export { default as DatasetBrowser } from './DatasetBrowser.svelte';

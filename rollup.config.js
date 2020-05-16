@@ -6,7 +6,6 @@ import json from '@rollup/plugin-json';
 import builtins from 'rollup-plugin-node-builtins';
 import typescript from "@wessberg/rollup-plugin-ts";
 
-const svelteOptions = require("./svelte.config");
 
 const name = pkg.name
 	.replace(/^(@\S+\/)?(svelte-)?(\S+)/, '$3')
@@ -21,7 +20,6 @@ export default {
 	],
 	plugins: [
 		svelte({
-			...svelteOptions
 		}),
 		resolve({
 			preferBuiltins: true

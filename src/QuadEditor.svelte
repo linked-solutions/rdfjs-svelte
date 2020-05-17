@@ -29,33 +29,57 @@
 </script>
 
 <style>
-  .compact {
+  .area {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 0 1em;
+    gap: 0 1em;
     align-items: start;
+    margin-bottom: 0.8rem;
   }
+
+  .element {
+    display: flex;
+    align-items: left;
+    grid-row: 2/ span 1;
+    flex-grow: 4;
+  }
+
+  label {
+    grid-row: 1/ span 1;
+  }
+
 </style>
 
-<div class={labels?"labeled":"compact"}>
+<div class="area">
 
   {#if labels}
     <label>Subject:</label>
   {/if}
+  <div class="element">
   <TermEditor bind:value={subject} termTypes="['BlankNode', 'NamedNode']" />
+  </div>
   {#if labels}
     <label>Predicate:</label>
   {/if}
+  <div class="element">
   <ExistingTermEditor bind:value={predicate} />
+  </div>
   {#if labels}
     <label>Object:</label>
   {/if}
+  <div class="element">
   <TermEditor
     bind:value={object}
     termTypes="['BlankNode', 'NamedNode', 'Literal']" />
+  </div>
   {#if labels}
     <label>Graph:</label>
   {/if}
+  <div class="element">
   <TermEditor
     bind:value={graph}
     termTypes="['BlankNode', 'NamedNode', 'DefaultGraph']" />
+  </div>
 </div>

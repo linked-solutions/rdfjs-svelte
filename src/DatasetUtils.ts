@@ -102,7 +102,7 @@ export default class DatasetManager {
         let j = max.id;
         sorted.forEach(holder => {
             if (!holder.id) {
-                holder.id = ++j + Math.floor(Math.random() * 10000);
+                holder.id = ++j;
             }
         });
         //console.log(uuid, "sorted", JSON.stringify(sorted));

@@ -70,18 +70,36 @@ function setObject(event) {
 }
 
 </script>
+<style>
+ .icon {
+     padding: .4rem;
+ }
+
+</style>
 
 <div>
     {#if subjectFilter}
         <h2>
-        {subjectFilter.value}
-        <SubjExpand size="2em"/>
+            <button class="icon" on:click={() => {
+                    objectFilter = subjectFilter;
+                    subjectFilter = null;
+                }}>
+                <ObjExpand size="1rem"/>
+            </button>
+            {subjectFilter.value}
+            <SubjExpand size="2em"/>
         </h2>
     {/if}
     {#if objectFilter}
         <h2 style="text-align: end;">
-        <ObjExpand size="2em"/>
-        {objectFilter.value}
+            <ObjExpand size="2em"/>
+            {objectFilter.value}
+            <button class="icon" on:click={() => {
+                subjectFilter = objectFilter;
+                objectFilter = null;
+            }}>
+            <SubjExpand size="1rem"/>
+        </button>
         </h2>
     {/if}
     {#each orderedQuads as t (t.id)}

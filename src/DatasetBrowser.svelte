@@ -2,7 +2,7 @@
 import SubjExpand from './images/SubjExpand.svelte';
 import ObjExpand from './images/ObjExpand.svelte';
 import BrowserRow from "./BrowserRow.svelte"
-import * as Factory from "@rdfjs/data-model";
+import Factory from "@rdfjs/data-model";
 import DatasetManager from "./DatasetUtils";
 export let value;
 export let subject = null;

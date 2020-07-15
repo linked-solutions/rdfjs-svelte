@@ -1,4 +1,4 @@
-import * as Factory from "@rdfjs/data-model";
+import Factory from "@rdfjs/data-model";
 import Dataset from "@rdfjs/dataset";
 import QuadEditor from "./QuadEditor.svelte";
 import * as RDF from "rdf-js";

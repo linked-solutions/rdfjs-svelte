@@ -2,7 +2,7 @@
   import TermEditor from "./TermEditor.svelte";
   import ExistingTermEditor from "./ExistingTermEditor.svelte";
   import ResourceNavigator from "./ResourceNavigator.svelte";
-  import * as Factory from "@rdfjs/data-model";
+  import Factory from "@rdfjs/data-model";
   import { createEventDispatcher } from "svelte";
   const dispatch = createEventDispatcher();
   export let value;

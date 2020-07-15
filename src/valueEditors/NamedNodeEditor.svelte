@@ -1,5 +1,5 @@
 <script>
-  import * as Factory from "@rdfjs/data-model";
+  import Factory from "@rdfjs/data-model";
   import Prefixplete from "prefixplete";
   import { onMount } from "svelte";
 

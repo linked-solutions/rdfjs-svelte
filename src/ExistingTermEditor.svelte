@@ -1,5 +1,5 @@
 <script>
-  import * as Factory from "@rdfjs/data-model";
+  import Factory from "@rdfjs/data-model";
   import HtmlEditor from "./valueEditors/HtmlEditor.svelte";
   import SimpleLiteralEditor from "./valueEditors/SimpleLiteralEditor.svelte";
   import NamedNodeEditor from "./valueEditors/NamedNodeEditor.svelte";

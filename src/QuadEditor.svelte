@@ -46,7 +46,7 @@
     flex-grow: 4;
   }
 
-  label {
+  .label {
     grid-row: 1/ span 1;
   }
 
@@ -55,19 +55,19 @@
 <div class="area">
 
   {#if labels}
-    <label>Subject:</label>
+    <span class="label">Subject:</span>
   {/if}
   <div class="element">
   <TermEditor bind:value={subject} termTypes="['BlankNode', 'NamedNode']" />
   </div>
   {#if labels}
-    <label>Predicate:</label>
+    <span class="label">Predicate:</span>
   {/if}
   <div class="element">
   <ExistingTermEditor bind:value={predicate} />
   </div>
   {#if labels}
-    <label>Object:</label>
+    <span class="label">Object:</span>
   {/if}
   <div class="element">
   <TermEditor
@@ -75,7 +75,7 @@
     termTypes="['BlankNode', 'NamedNode', 'Literal']" />
   </div>
   {#if labels}
-    <label>Graph:</label>
+    <span class="label">Graph:</span>
   {/if}
   <div class="element">
   <TermEditor

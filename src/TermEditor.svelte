@@ -80,6 +80,7 @@
 
 <div class="te">
   {#if !value}
+    <!-- svelte-ignore a11y-no-onchange -->
     <select bind:value={type} on:change={typeSelected}>
       <option disabled value={null}>Select type</option>
       {#each Object.keys(options) as option}

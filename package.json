@@ -22,7 +22,7 @@
     "rollup": "^2.21.0",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-svelte": "5.2.3",
-    "svelte": "3.24.0",
+    "svelte": "3.49.0",
     "typescript": "^3.9.6"
   },
   "keywords": [
